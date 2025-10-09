@@ -1,0 +1,24 @@
+using System.Security.Cryptography.X509Certificates;
+
+internal class Program
+{
+    class Ucenik
+    {
+        public string Ime;
+        public int Godine;
+
+        public Ucenik(string ime, int godine) {
+            Ime = ime;
+            Godine = godine;
+        }
+        public void Prikazi() {
+            Console.WriteLine("Moje ime je:" + Ime + " i imam " + Godine + " godina");
+        }
+    }
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+        Ucenik ucenik = new Ucenik("Milan", 33);
+        ucenik.Prikazi();
+    }
+}
