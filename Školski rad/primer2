@@ -1,0 +1,32 @@
+internal class Program
+{
+    class Ucenik
+    {
+        public string Ime;
+        public int broj_godina;//canon case
+        public int brojGodina;// camel case
+        public bool punoletan;
+        private float prosek;
+        public void Prikazi()
+        {
+            Console.WriteLine ("Ja sam" +Ime+ " I imam " +broj_godina+" godina"); 
+        }
+    }
+    private static void Main(string[] args)
+    {
+        Ucenik ucenik = new Ucenik();
+        ucenik.Ime = "Milan";
+        ucenik.broj_godina = 100;
+        ucenik.Prikazi();
+        ucenik.punoletan = false;
+        if (ucenik.punoletan)//ucenik.punoleta == true
+        {
+            Console.WriteLine("Ja sam punoletan");
+        }
+        else {
+            Console.WriteLine("Ja sam maloletan");
+        }
+        Console.WriteLine("Hello, World!");
+
+    }
+}
