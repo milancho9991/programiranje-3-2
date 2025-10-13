@@ -1,0 +1,23 @@
+internal class Program
+{
+    class Sabiranje {
+        public int prviBroj;
+        public int drugiBroj;
+
+        public Sabiranje(int prvi, int drugi) {
+            prviBroj = prvi;
+            drugiBroj = drugi;
+        }
+        public int Saberi() {
+            return prviBroj + drugiBroj;
+        }
+    }
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+        Sabiranje sabiranje = new Sabiranje(5, 3);
+        int zbir = sabiranje.Saberi(); 
+        Console.WriteLine("Zbir dva broja je: "+ zbir);
+        Console.WriteLine("Zbir dva broja je "+sabiranje.Saberi());
+    }
+}
