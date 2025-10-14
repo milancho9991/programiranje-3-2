@@ -1,0 +1,36 @@
+using System;
+
+public class HelloWorld
+{
+    class Sabiranje {
+        public int prviBroj;
+        public int drugiBroj;
+
+        public Sabiranje(int prvi, int drugi) {
+            prviBroj = prvi;
+            drugiBroj = drugi;
+        }
+        public int Saberi() {
+            return prviBroj + drugiBroj;
+        }
+        public int Oduzmi(){
+            return prviBroj - drugiBroj;
+        }
+    }
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Unesite prvi broj: ");
+        int broj1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Unesite drugi broj: ");
+        int broj2 = int.Parse(Console.ReadLine());
+        
+        if (broj1 < broj2){
+            Console.WriteLine("Molimo vas da prvi broj bude veci od drugog");
+        }
+        Sabiranje sabiranje = new Sabiranje(broj1, broj2);
+        int zbir = sabiranje.Saberi(); 
+        int razlika = sabiranje.Oduzmi();
+        Console.WriteLine("Zbir dva broja je: "+ zbir);
+        Console.WriteLine("Razlika dva broj je: "+ razlika);
+    }
+}
