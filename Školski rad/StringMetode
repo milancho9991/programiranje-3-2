@@ -1,0 +1,84 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        List<int> milan = new List<int>();
+
+        milan.Add(75);
+        milan.Add(60);
+        milan.Add(90);
+        foreach (int i in milan)
+        {
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("---------------");
+        List<int> stojanovic = new List<int>();
+
+        stojanovic.Add(85);
+        stojanovic.Add(70);
+        stojanovic.Add(95);
+        foreach (int i in stojanovic)
+        {
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("---------------");
+        milan.AddRange(stojanovic);
+        foreach (int i in milan)
+        {
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("---------------");
+        bool proveriti = milan.Contains(90);
+
+        if (proveriti == true)
+        {
+            Console.WriteLine("Ima 90");
+        }
+        else
+        {
+            Console.WriteLine("Ok");
+        }
+        Console.WriteLine("---------------");
+        int indeksrezultata = milan.IndexOf(70);
+        Console.WriteLine(indeksrezultata);
+        Console.WriteLine("---------------");
+
+        milan.Insert(2, 65);
+        foreach (int i in milan) {
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("---------------");
+        milan.Remove(60);
+        foreach (int i in milan)
+        {
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("---------------");
+        milan.RemoveAt(0);
+        foreach (int i in milan)
+        {
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("---------------");
+        milan.Sort();
+        foreach (int cute in milan)
+        {
+            Console.WriteLine(cute);
+        }
+        Console.WriteLine("---------------");
+        milan.Reverse();
+        foreach (int cute in milan)
+        {
+            Console.WriteLine(cute);
+        }
+        Console.WriteLine("---------------");
+        milan.Clear();
+        foreach (int cute in milan)
+        {
+            Console.WriteLine(cute);
+        }
+        Console.WriteLine("---------------");
+
+
+    }
+}
