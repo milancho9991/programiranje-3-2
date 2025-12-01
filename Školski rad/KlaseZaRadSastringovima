@@ -1,0 +1,84 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+
+        string ime = "Milan";
+        int brojKaraktera = ime.Length;
+        Console.WriteLine(brojKaraktera);
+
+        string uvecajSlova = ime.ToUpper();
+        Console.WriteLine(uvecajSlova);
+
+        string status = "open";
+        //status = status.ToUpper();
+        // Console.WriteLine(status);
+        string enumStatus = "OPEN";
+        enumStatus = enumStatus.ToLower();
+        Console.WriteLine(enumStatus);
+
+        if (status == enumStatus)
+        {
+            Console.WriteLine("Ovo je isto!");
+        }
+        else
+        {
+            Console.WriteLine("Nije isto!");
+        }
+
+        string trimString = "   Milan Stojanovic";
+        Console.WriteLine(trimString);
+        trimString = trimString.Trim();
+        Console.WriteLine(trimString);
+
+        string text = "Administrator";
+        string deoTeksat = text.Substring(2, 4);
+        Console.WriteLine(deoTeksat);
+
+        string recenica = "Ucenik trece godine";
+        int pozicija = recenica.IndexOf("trece");
+        Console.WriteLine(pozicija);
+        string treceText = recenica.Substring(7, 5);
+        Console.WriteLine(treceText);
+
+        string lozinka = "Ovo je moja lozinka";
+        string skrivenaLozinka = lozinka.Replace("lozinka", "*****");
+        Console.WriteLine(lozinka);
+        Console.WriteLine(skrivenaLozinka);
+
+        string recenica1 = "Ovo je cas programiranja";
+        string[] rec = recenica1.Split(' ');
+        Console.WriteLine(rec[0]);
+        Console.WriteLine(rec[1]);
+        Console.WriteLine(rec[2]);
+        Console.WriteLine(rec[3]);
+
+        string link = "https://cloudinary-marketing-res.cloudinary.com/image/upload/w_1000/q_auto/f_auto/landmannalaugar_iceland.jpg";
+        string[] slike = link.Split("/");
+        Console.WriteLine(slike[slike.Length - 1]);
+
+
+        string textAdmin = "admin123";
+        Console.WriteLine(textAdmin.StartsWith("admin"));
+
+        string dokument = "dokument.pdf";
+        Console.WriteLine(dokument.EndsWith(".pdf"));
+
+        string novaRecenica = "Danas je lep dan";
+        Console.WriteLine(novaRecenica.Contains("lep"));
+
+        String adminNoviText = "Administrator";
+        string skraceno = adminNoviText.Remove(5);
+        Console.WriteLine(skraceno); // Admin
+
+        string tekst = "ABCDF";
+        string noviTekst = tekst.Insert(3, "123");
+        Console.WriteLine(noviTekst);
+
+        int godine = 32;
+        string mojeIme = "Milan";
+        string poruka = String.Format("{0} ima {1} godine", mojeIme, godine);
+        Console.WriteLine(poruka);
+    }
+}
