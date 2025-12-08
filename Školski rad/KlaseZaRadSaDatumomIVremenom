@@ -1,0 +1,29 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+        /*
+        DateTime trenutnoVreme = DateTime.Now;
+        Console.WriteLine(trenutnoVreme);
+
+        DateTime danasnjiDatum = DateTime.Today;
+        Console.WriteLine(danasnjiDatum);
+
+        string vreme = DateTime.Now.ToLongTimeString();   
+        Console.WriteLine(vreme);
+        */
+
+        DateTime vreme = DateTime.Now;
+        Console.WriteLine(vreme);
+
+        string datum = vreme.ToString("dd.MM.yyyy");
+        Console.WriteLine(datum);
+
+        string vreme1 = vreme.ToString("HH:mm:ss");
+        Console.WriteLine(vreme1);
+
+        string datum1 = vreme.ToString("yyyy-MM-dd");
+        Console.WriteLine(datum1);
+    }
+}
