@@ -25,5 +25,26 @@ internal class Program
 
         string datum1 = vreme.ToString("yyyy-MM-dd");
         Console.WriteLine(datum1);
+
+        DateTime vreme2 = DateTime.Now;
+        string danUNedelji = vreme2.ToString("dddd");
+        Console.WriteLine(danUNedelji);
+
+        DateTime rodjendan = new DateTime(1992,08,12);
+        Console.WriteLine(rodjendan);
+        Console.WriteLine(rodjendan.ToString("dd-MM-yyyy"));
+
+        DateTime trenutniDatum = DateTime.Now;
+        Console.WriteLine(trenutniDatum);
+        DateTime dodajDan = trenutniDatum.AddDays(7);
+        Console.WriteLine(dodajDan);
+        DateTime dodajMesec = trenutniDatum.AddMonths(1);
+        Console.WriteLine(dodajMesec);
+        DateTime dodajGodinu = trenutniDatum.AddYears(2);
+        Console.WriteLine(dodajGodinu);
+
+        TimeSpan razlika = trenutniDatum - rodjendan;
+        Console.WriteLine(razlika.Days);
+        Console.WriteLine(razlika.TotalHours);
     }
 }
