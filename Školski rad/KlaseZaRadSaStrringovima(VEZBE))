@@ -1,0 +1,39 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+
+        /*
+        string ime = "Milan Stojanović";
+        ime = ime.Replace(" ", "");
+        Console.WriteLine(ime);
+        ime = ime.ToLower();
+        Console.WriteLine(ime);
+        ime = ime.Insert(0, "www.");
+        Console.WriteLine(ime);
+        ime = ime.Insert(ime.Length, ".com");
+        Console.WriteLine(ime);
+        */
+        string link = "https://ets.edu.rs/";
+        Console.WriteLine(link);
+        string[] splitovanLink = link.Split('/');
+        Console.WriteLine(splitovanLink[0]);
+        Console.WriteLine(splitovanLink[1]);
+        Console.WriteLine(splitovanLink[2]);
+        string novoSplitovanje = splitovanLink[2];
+        string[] splitovanje2 = novoSplitovanje.Split(".");
+        Console.WriteLine(splitovanje2[0]);
+        Console.WriteLine(splitovanje2[1]);
+        string imeSkole = splitovanje2[0];
+        imeSkole = imeSkole.ToUpper();
+        Console.WriteLine(imeSkole);
+        imeSkole = imeSkole.Replace("E", "Elektro");
+        Console.WriteLine(imeSkole);
+        imeSkole = imeSkole.Replace("T", "tehnička");
+        Console.WriteLine(imeSkole);
+        imeSkole = imeSkole.Replace("S", " Škola");
+        Console.WriteLine(imeSkole);
+
+    }
+}
