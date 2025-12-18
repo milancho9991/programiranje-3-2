@@ -46,5 +46,25 @@ internal class Program
         TimeSpan razlika = trenutniDatum - rodjendan;
         Console.WriteLine(razlika.Days);
         Console.WriteLine(razlika.TotalHours);
+
+        //Napraviti promenljivu sa trenutnim datumom
+        //i izracunati koliko dana ima do nov godine
+        
+        DateTime danasnjiDatum = DateTime.Now;
+        Console.WriteLine(danasnjiDatum);
+        
+        DateTime novaGodina = new DateTime(2026,1,1);
+        Console.WriteLine(novaGodina);
+        
+        TimeSpan danaDoNoveGodine = novaGodina - danasnjiDatum;
+        Console.WriteLine(danaDoNoveGodine.Days);
+        
+        DateTime datumRodjenja = new DateTime(1992, 08, 12);
+        int brojGodina = danasnjiDatum.Year - datumRodjenja.Year;
+        Console.WriteLine(  brojGodina);
+        
+        TimeSpan brojGodinaa = danasnjiDatum - datumRodjenja;
+        int brojGodina1 = brojGodinaa.Days / 365;
+        Console.WriteLine( brojGodina1);
     }
 }
